@@ -1,0 +1,45 @@
+{
+    "code": "0",
+    "msg": "",
+    "data": {
+        "total": 4,
+        "time": "2015-12-24 15:31:45",
+        "list": [{
+            "id": "b0061e7a-abbf-4146-b72c-a91e036d1534",
+            "status": 4,
+            "vehicleNum": "浙A77998",
+            "cityName": "杭州市",
+            "submitTime": "2015-12-23 17:42:10",
+            "reportList": [{
+                "id": "d3e37471-b529-4c08-8b50-a28379f3a6af",
+                "status": 0,
+                "companyCode": "1122",
+                "companyName": "渤海车险",
+                "companyUrl": "http://img.chengniu.com/car_service_provider/15102121310844.png"
+            }, {
+                "id": "e572b4ae-755c-41a4-9969-d6a13a8ac01d",
+                "status": 0,
+                "companyCode": "1120",
+                "companyName": "鼎和车险",
+                "companyUrl": "http://img.chengniu.com/car_service_provider/15101614560690.png"
+            }]
+        }, {
+            "id": "c24130c5-1898-4bd9-b088-fb8b7f5d7723",
+            "status": 2,
+            "vehicleNum": "新车未上牌",
+            "cityName": "杭州市",
+            "submitTime": "2015-12-23 15:43:20",
+            "reportList": [{
+                "id": "047f2800-a71d-4423-a52b-dafe458e74a3",
+                "status": 0,
+                "companyCode": "1120",
+                "companyName": "鼎和车险"
+            }, {
+                "id": "37cbc214-2841-43d9-b4da-caa02169706d",
+                "status": 0,
+                "companyCode": "1122",
+                "companyName": "渤海车险"
+            }]
+        }]
+    }
+}

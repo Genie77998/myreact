@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+@import "com";
+/* .container{
+  padding-top:10px;
+} */
+.action{
+  p{
+    line-height:20px;
+    padding:5px;
+  }
+}
+._topTit{
+  line-height:44px;
+  padding-left:10px;
+}
+.success{
+  padding:10px;
+  background:#8CC34B;
+  display: -webkit-box;
+  .pic{
+    width:80px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    img{
+      width:45px;
+      height:48px;
+    }
+  }
+  .info{
+    color:white;
+    -webkit-box-flex: 1;
+    height:50px;
+    overflow:hidden;
+    h3{
+      line-height:24px;
+      font-size:16px;
+    }
+    p{
+      line-height:20px;
+      font-size:14px;
+    }
+  }
+}
+.item {
+  display: -webkit-box;
+  position: relative;
+  height: 48px;
+  padding: 0 24px;
+  margin-top: -1px;
+  background: #fff;
+  border-top: #e6e6e6 1px solid;
+  border-bottom: #e6e6e6 1px solid;
+  &.arrow {
+    &:after {
+      right: 16px;
+    }
+  }
+  .key {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    width: 100px;
+  }
+  .keys {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    width: 150px;
+  }
+  .value {
+    -webkit-box-flex: 1;
+    overflow: hidden;
+    .icon {
+      width: 24px;
+      vertical-align: middle;
+    }
+  }
+  input {
+    height: 48px;
+    width:100%;
+  }
+  input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+    margin: -3px 3px 0 0;
+    background-image: url("../images/checkbox-uncheck.png");
+    background-size: contain;
+    vertical-align: middle;
+    &:checked {
+      background-image: url("../images/checkbox-checked.png");
+    }
+  }
+  input[type=date] {
+    width: 80%;
+  }
+  select {
+    display: block;
+    width: 33%;
+    height:48px;
+    line-height:48px;
+    outline:none;
+  }
+  &.item-city {
+    .value {
+      display: -webkit-box;
+    }
+  }
+}
+.itemchose{
+  margin-top:12px;
+  span {
+    padding: 0 10px 0 30px;
+    line-height: 48px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-image: url(../images/radio-uncheck.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+  }
+    &.active {
+      color: #ff7f2f;
+      &:after {
+        background-image: url(../images/radio-checked.png);
+      }
+    }
+  }
+}
+.wrap-insured {
+  margin: 16px 0;
+}
+
+.wrap-insured label, .wrap-applicant label {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  color: #4c4c4c;
+}
+.bankList{
+  dd{
+    padding-bottom:12px;
+  }
+  dt{
+    padding:10px 0;
+    text-align:center;
+    font-size:15px;
+    line-height:30px;
+    color:#989898;
+    .action{
+      padding-top:10px;
+    }
+  }
+  .item{
+    padding:0 36px 0 10px;
+    .key{
+      width:50px;
+      height:48px;
+      position: relative;
+      img{
+        width:36px;
+        height:36px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -18px;
+        margin-left: -18px;
+      }
+    }
+    .value{
+      line-height:48px;
+      font-size:14px;
+      color:#4c4c4c;
+    }
+  }
+}
+
+.pb30{
+  padding-bottom:30px;
+}

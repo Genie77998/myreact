@@ -1,0 +1,82 @@
+@import "com";
+dl{
+	padding-bottom:10px;
+	dd{
+		padding-bottom:10px;
+		.items{
+		    display: -webkit-box;
+		    background: white;
+		    box-sizing: border-box;
+		    padding: 10px 30px 10px 16px;
+		    position:relative;
+		    &.arrow:after{
+		    	right:10px;
+		    }
+		    .dir{
+				display: -webkit-box;
+				width:60px;
+				height:48px;
+				img{
+					width:48px;
+					height:48px;
+				}
+		    }
+		    .key{
+		    	height:48px;
+		    	overflow:hidden;
+		    	-webkit-box-flex: 1;
+		    	h3{
+		    		span{
+		    			background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWVJREFUeNrsWO1twjAQNYgB0g3oBiDlfxmhmaAwAhMgJmAE0gkoE3SBSHgDGIEN4BldpCMiilBim6D3pJMjx47fi+/OH8YQBEEQhCcURTF25nOMQceEExRz2A9sUnltYb+wPE3T88sJAPlvFFtY0tDUkV9AxN/LCAD5uZB/RNbUiHIi8rZjDzsgP6uQd6TXsA8QvJl7ljrtOlvpG3cGQOKIYqz8PAPpU11Qo9ip+Dih7Wc0AeL3O1U1BSHb0MeRP6iqrE08tHUhnWnyJvIO0iav+UZwAV/qef9Ev33NN8IH8YOM03XbYAKigAIoIMZChly+kfQ3UdsE+0RwJip9nqWvRYpdhhJw8fE3IWDAGKCA+wNMJmZ9DTLyKGBdbtIQM6ay6aMLhZiBFf586TqrPgpweX7WxZY5lgDjM3iDCCgPOBLE/RMA4v+9ngEVA1yJKeDdFrKlab4D9XkpQBAEQRDvgasAAwAQ2WLSiOkQ9wAAAABJRU5ErkJggg==');
+						width: 20px;
+						height: 20px;
+						position: relative;
+						margin-top: -10px;
+						vertical-align: top;
+						top: 50%;
+						display: inline-block;
+						background-size: 100% auto;
+						background-position: center center;
+		    		}
+		    	}
+		    	.one{
+					h3{
+						line-height:48px;
+						height:48px;
+						width:100%;
+						overflow:hidden;
+						font-size:15px;
+						color:#4c4c4c;
+						&.f_org{
+							color:#ff7e2e;
+						}
+					}
+		    	}
+		    	.two{
+					h3{
+						line-height:30px;
+						height:30px;
+						width:100%;
+						overflow:hidden;
+						font-size:15px;
+						color:#4c4c4c;
+						&.f_org{
+							color:#ff7e2e;
+						}
+					}
+					p{
+						line-height:18px;
+						height:18px;
+						width:100%;
+						overflow:hidden;
+						color:#989898;
+						font-size:12px;
+					}
+		    	}
+		    }
+		}
+	}
+}
+.action{
+	padding-top:10px;
+}
