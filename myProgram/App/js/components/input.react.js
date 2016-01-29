@@ -4,16 +4,33 @@ import React from 'react'
 class InputList extends React.Component {
 
   render() {
+    const _defalutName = this.props.defalutName
+    const _defalutValue = this.props.defalutValue
+    const _defalutNameCN = this.serach(_defalutName)
     return (
       <dd className="itemInput">
-        <div className="key">{this.serach(this.props.defalutName)}</div>
+        <div className="key">{_defalutNameCN}</div>
         <div className="value">
-            <input type="text" onChange={this.props.handBlur.bind(this)} name={this.props.defalutName} defaultValue={this.props.defalutValue} ref={this.props.defalutName} />
+            <input type="text" className="ar" data-rule={this.rule(_defalutName)} data-require="true" data-null={"请填写您的"+_defalutNameCN} data-error={_defalutNameCN+'格式有误'} onBlur={this.props.handBlur} placeholder={"请填写您的"+_defalutNameCN} name={_defalutName} defaultValue={_defalutValue} />
         </div>
         </dd>
     )
   }
-
+  
+  rule(name){
+    switch(name){
+      case 'name':
+        return 'idCardNameReg'
+      break;
+      case 'mobile':
+        return 'phoneReg'
+      break;
+      case 'email':
+        return 'emailReg'
+      break;
+      default: return '';
+    }
+  }
   serach(name){
     switch(name){
       case 'name':

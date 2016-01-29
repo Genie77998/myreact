@@ -108,7 +108,8 @@
     "redux-logger": "latest",
     "redux-thunk": "latest",
     "webpack-dev-middleware": "latest",
-    "webpack-hot-middleware": "latest"
+    "webpack-hot-middleware": "latest",
+    "npm-zepto":" 1.1.7"
   },
   "babel": {
     "presets": [

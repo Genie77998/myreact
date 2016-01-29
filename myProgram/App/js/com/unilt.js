@@ -1,7 +1,7 @@
 /**
  * author:wj77998
  */
-const obj = 'insurancefinal'
+const obj = 'reactDemo'
 const _ord = "insureOrderList"
 const config = {
     mode: 0, //模式：0 测试 /1 预发 /2 生产
@@ -70,6 +70,50 @@ const common = {
     priceReg: /^\d{1,4}(\.\d{1,2})?$/g,
     emailReg: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
     appId: '10000018',
+    getData(from) {
+        var formData = tool.getFormDataAsObj(from);
+        return formData;
+    },
+
+    validate(data) {
+        var _this = this,
+            _rule = {
+                phoneReg : _this.phoneReg,
+                idCardNameReg : _this.idCardNameReg,
+                emailReg : _this.emailReg
+            },
+            valid = true;
+        for (let i in data) {
+            var value = data[i],
+                $item = $('[name=' + i + ']'),
+                require = $item.data('require'),
+                nullMsg = $item.data('null'),
+                errorMsg = $item.data('error'),
+                ruleName = $item.data('rule') || '',
+                rule = _rule[ruleName];
+                console.log(data,i,data[i],require,nullMsg,errorMsg,ruleName,rule);
+            if (require) {
+                if (!value) {
+                    valid = false;
+                    console.log(nullMsg);
+                    break;
+                } else if (ruleName && !rule.test(value)) {
+                    if(rule.test(value)){continue;}
+                    valid = false;
+                    console.log(errorMsg);
+                    break;
+                }
+            } else {
+                if (value && ruleName && !rule.test(value)) {
+                    if(rule.test(value)){continue;}
+                    valid = false;
+                    console.log(errorMsg);
+                    break;
+                }
+            }
+        }
+        return valid ? data : false;
+    },
     format: function(s1, s2) {
         var o = {},
             dfmt = 'yyyy-MM-dd hh:mm:ss',

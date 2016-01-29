@@ -13,19 +13,20 @@ function renderDevTools(store) {
         let {DevTools, DebugPanel, LogMonitor} = require('redux-devtools/lib/react')
         return (
             <DebugPanel top right bottom>
-            <DevTools store={store} monitor={LogMonitor} />
+                <DevTools store={store} monitor={LogMonitor} />
             </DebugPanel>
         )
     }
     return null
 }
+
 const store = configureStore()
 let unsubscribe = store.subscribe(() =>
   console.log(store.getState(),'log')
 )
-
+const rootElement = document.getElementById('myApp')
 const init = function(){
-	render(<div><Provider store={store}><Router routes={routes} history={HashLocation} /></Provider>{renderDevTools(store)}</div>, document.body);
+	render(<div><Provider store={store}><Router routes={routes} history={HashLocation} /></Provider>{renderDevTools(store)}</div>, rootElement)
 }
 
 /*document.addEventListener("DazeJSObjReady", () => {
@@ -41,3 +42,6 @@ if(__PROD__){
     //绑定处理程序
     DZ_COM.login(() => init());
 }
+
+
+

@@ -43,10 +43,11 @@ module.exports = function(grunt) {
                         }
                     }),
                     new webpack.ProvidePlugin({
-                        "$": path.join(__dirname,'myProgram/App/js/lib/zepto'),
-                        "Zepto" : path.join(__dirname,'myProgram/App/js/lib/zepto'),
+                        "$": "npm-zepto",
+                        "Zepto" : "npm-zepto",
                         "_": "underscore",
                         "FastClick": "fastclick",
+                        "jQuery": 'jquery',
                         "Daze":path.join(__dirname,'myProgram/App/js/libs_native/daze')
                     }),
 					new webpack.optimize.DedupePlugin(),

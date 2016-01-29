@@ -1,4 +1,4 @@
-var cityList = [{
+export const cityList = [{
     "PY": "aba",
     "cityCode": 5132,
     "frameNumLen": 6,
@@ -3599,6 +3599,3 @@ var cityList = [{
     "province": "贵州",
     "valid": true
 }];
-
-
-export default cityList;

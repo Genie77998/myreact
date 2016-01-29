@@ -51,8 +51,8 @@ module.exports = {
             '__DEBUG__': false
         }),
         new webpack.ProvidePlugin({
-            "$": path.join(__dirname, 'myProgram/App/js/lib/zepto'),
-            "Zepto": path.join(__dirname, 'myProgram/App/js/lib/zepto'),
+            "$": 'npm-zepto',
+            "Zepto": 'npm-zepto',
             "_": "underscore",
             "FastClick": "fastclick",
             "Daze": path.join(__dirname, 'myProgram/App/js/libs_native/daze')
